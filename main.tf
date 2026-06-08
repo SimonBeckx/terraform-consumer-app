@@ -27,7 +27,7 @@ module "app_data_storage" {
 
 # Logs storage — separate instance of the same module, also pinned to v1.0.0.
 module "logs_storage" {
-  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.0"
+  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.2"
 
   storage_account_name = "${var.project_name}${var.environment}logs"
   resource_group_name  = azurerm_resource_group.this.name
