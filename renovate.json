@@ -1,19 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "terraform": {
-    "enabled": true
-  },
-  "autodiscover": true,
-  "packageRules": [
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["git-tags"],
-      "automerge": false,
-      "labels": ["dependencies", "terraform"],
-      "commitMessageTopic": "terraform module {{depName}}"
-    }
-  ]
+  "description": "PLACEHOLDER: Deze repository wordt centraal beheerd door de DevOps orchestrator. Voeg hier eventuele repo-specifieke overrides toe."
 }
