@@ -15,7 +15,7 @@ resource "azurerm_resource_group" "this" {
 # Application data storage — pinned to v1.0.0 of the storage module.
 # Renovate tracks git tags on the GitHub repo and will open a PR to bump this ref.
 module "app_data_storage" {
-  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.0"
+  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.1"
 
   storage_account_name = "${var.project_name}${var.environment}data"
   resource_group_name  = azurerm_resource_group.this.name
@@ -27,7 +27,7 @@ module "app_data_storage" {
 
 # Logs storage — separate instance of the same module, also pinned to v1.0.0.
 module "logs_storage" {
-  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.0"
+  source = "git::https://github.com/SimonBeckx/terraform-azurerm-storage-module.git?ref=v1.0.1"
 
   storage_account_name = "${var.project_name}${var.environment}logs"
   resource_group_name  = azurerm_resource_group.this.name
